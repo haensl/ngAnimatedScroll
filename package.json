@@ -1,0 +1,50 @@
+{
+  "name": "ng-animate-scroll",
+  "version": "1.0.0",
+  "description": "A simple angular.js service to facilitate animated scrolling.",
+  "main": "lib/ngAnimateScroll.service.min.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haensl/ngAnimatedScroll.git"
+  },
+  "keywords": [
+    "angular.js",
+    "angular",
+    "angularjs",
+    "scroll",
+    "animate",
+    "smooth",
+    "element"
+  ],
+  "author": {
+    "name": "Hans-Peter Dietz",
+    "email": "h.p.dietz@gmail.com",
+    "twitter": "@h_p_d"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haensl/ngAnimatedScroll/issues"
+  },
+  "homepage": "https://github.com/haensl/ngAnimatedScroll#readme",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^2.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "jasmine-core": "^2.4.1",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.7",
+    "run-sequence": "^1.1.5"
+  }
+}
