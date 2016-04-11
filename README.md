@@ -1,5 +1,5 @@
 # ngAnimatedScroll
-A simple angular.js service to facilitate animated scrolling.
+A promise based angular.js service to facilitate animated scrolling.
 
 ## Features
 
