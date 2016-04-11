@@ -14,7 +14,7 @@ A simple angular.js service to facilitate animated scrolling.
     * via **NPM**:
 
       ```javascript
-      npm install ngAnimatedScroll --save
+      npm install ng-animated-scroll --save
       ```
 
     * or **Bower**:
