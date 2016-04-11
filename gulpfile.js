@@ -67,16 +67,13 @@
     return del(['dist/*'], { force: true });
   });
 
-  gulp.task('dist', function(done) {
-    getVersion(function(version) {
-      gulp.src('lib/*.js')
-        .pipe($.uglify())
-        .pipe($.rename(function(path) {
-          path.basename += '.' + version + '.min';
-        }))
-        .pipe(gulp.dest(require('path').join(root, '/dist')));
-      done();
-    });
+  gulp.task('dist', function() {
+    return gulp.src('lib/*.js')
+      .pipe($.uglify())
+      .pipe($.rename(function(path) {
+        path.basename += '.min';
+      }))
+      .pipe(gulp.dest(require('path').join(root, '/dist')));
   });
 
   gulp.task('build', function(done) {

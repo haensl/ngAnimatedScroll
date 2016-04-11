@@ -1,8 +1,8 @@
 {
-  "name": "ng-animate-scroll",
-  "version": "1.0.0",
+  "name": "ng-animated-scroll",
+  "version": "1.3.0",
   "description": "A simple angular.js service to facilitate animated scrolling.",
-  "main": "lib/ngAnimateScroll.service.min.js",
+  "main": "dist/ngAnimatedScroll.service.min.js",
   "scripts": {
     "test": "gulp test"
   },
