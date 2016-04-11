@@ -1,3 +1,8 @@
+1.3.1
+-----
+
+- Update ignored files
+
 1.3.0
 -----
 
