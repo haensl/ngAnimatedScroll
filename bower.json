@@ -4,7 +4,7 @@
   "authors": [
     "HP Dietz <h.p.dietz@gmail.com>"
   ],
-  "description": "A simple angular.js service to facilitate animated scrolling.",
+  "description": "A promise based angular.js service to facilitate animated scrolling.",
   "main": "dist/ngAnimatedScroll.service.min.js",
   "moduleType": [
     "amd"
@@ -13,14 +13,19 @@
     "scroll",
     "animate",
     "smooth",
-    "element"
+    "element",
+    "promise",
+    "promises"
   ],
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "spec"
+    "spec",
+    ".*",
+    "gulpfile.js",
+    "karma.conf.js"
   ],
   "dependencies": {
     "angular": "^1.5.3"
