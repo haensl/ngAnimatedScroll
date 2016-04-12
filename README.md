@@ -30,13 +30,13 @@
     - if installed via **NPM** include from `node_modules`:
 
     ```html
-    <script src="/node_modules/ngAnimatedScroll/dist/ngAnimatedScroll.min.js"></script>
+    <script src="/node_modules/ng-animated-scroll/dist/ngAnimatedScroll.service.min.js"></script>
     ```
 
     - if installed via **Bower** include from `bower_components`:
 
     ```html
-    <script src="/bower_components/ngAnimatedScroll/dist/ngAnimatedScroll.min.js"></script>
+    <script src="/bower_components/ng-animated-scroll/dist/ngAnimatedScroll.service.min.js"></script>
     ```
 
 ## Usage
