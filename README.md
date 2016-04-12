@@ -20,7 +20,7 @@ A promise based angular.js service to facilitate animated scrolling.
     * or **Bower**:
 
       ```javascript
-      bower install ngAnimatedScroll --save
+      bower install ng-animated-scroll --save
       ```
 
   2. Include the library into your application:

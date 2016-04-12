@@ -1,3 +1,8 @@
+1.3.2
+-----
+
+- Update bower package
+
 1.3.1
 -----
 
