@@ -1,5 +1,7 @@
 # ngAnimatedScroll
-A promise based angular.js service to facilitate animated scrolling.
+### A promise based angular.js service to facilitate animated scrolling.
+
+[![NPM](https://nodei.co/npm/ng-animated-scroll.png?downloads=true)](https://nodei.co/npm/ng-animated-scroll/)
 
 ## Features
 
@@ -39,7 +41,7 @@ A promise based angular.js service to facilitate animated scrolling.
 
 ## Usage
 
-Inject the `animtedScroll` service into your directive, factory, controller, etc. and call it's `scroll()` method.
+Inject the `animatedScroll` service into your directive, factory, controller, etc. and call it's `scroll()` method.
 
 ### Example: Simple scroll operation
 
