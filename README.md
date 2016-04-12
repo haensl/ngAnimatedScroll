@@ -13,31 +13,31 @@
 
   1. Install the ngAnimatedScroll package
 
-    * via **NPM**:
+    - via **NPM**:
 
-      ```javascript
-      npm install ng-animated-scroll --save
-      ```
+    ```javascript
+    npm install ng-animated-scroll --save
+    ```
 
-    * or **Bower**:
+    - or **Bower**:
 
-      ```javascript
-      bower install ng-animated-scroll --save
-      ```
+    ```javascript
+    bower install ng-animated-scroll --save
+    ```
 
   2. Include the library into your application:
 
-    * if installed via **NPM** include from `node_modules`:
+    - if installed via **NPM** include from `node_modules`:
 
-      ```html
-      <script src="/node_modules/ngAnimatedScroll/dist/ngAnimatedScroll.min.js"></script>
-      ```
+    ```html
+    <script src="/node_modules/ngAnimatedScroll/dist/ngAnimatedScroll.min.js"></script>
+    ```
 
-    * if installed via **Bower** include from `bower_components`:
+    - if installed via **Bower** include from `bower_components`:
 
-      ```html
-      <script src="/bower_components/ngAnimatedScroll/dist/ngAnimatedScroll.min.js"></script>
-      ```
+    ```html
+    <script src="/bower_components/ngAnimatedScroll/dist/ngAnimatedScroll.min.js"></script>
+    ```
 
 ## Usage
 
