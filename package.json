@@ -1,6 +1,6 @@
 {
   "name": "ng-animated-scroll",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "A promise based angular.js service to facilitate animated scrolling.",
   "main": "dist/ngAnimatedScroll.service.min.js",
   "scripts": {

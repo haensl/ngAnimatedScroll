@@ -1,3 +1,8 @@
+1.4.0
+-----
+
+- Enable the service to work with selectors
+
 1.3.2
 -----
 

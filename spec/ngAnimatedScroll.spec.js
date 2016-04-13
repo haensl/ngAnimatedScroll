@@ -68,6 +68,120 @@
           });
         });
 
+        describe('providing an angular.element as element', function() {
+          var deferred;
+          var resolved;
+          var rejectArgs;
+          var list;
+          var elementToScrollTo;
+          beforeEach(function() {
+            (function() {
+              var l = document.getElementById('list');
+              if (l) {
+                l.parentElement.removeChild(l);
+              }
+            })();
+
+            list = angular.element('<ul>').attr('id', 'list').attr('height', '150px').attr('style', 'overflow: scroll; max-height: 150px;');
+            elementToScrollTo = angular.element('<li>').attr('height', '25px');
+            list.append(elementToScrollTo);
+            for (var i = 0; i < 20; i++) {
+              list.append(angular.element('<li>').attr('height', '25px'));
+            }
+
+            document.body.appendChild(list[0]);
+            resolved = false;
+            deferred = animatedScroll.scroll(elementToScrollTo)
+              .then(function() {
+                resolved = true;
+              });
+
+            $rootScope.$apply();
+            $timeout.flush();
+            $interval.flush(800);
+          });
+
+          it('should resolve the promise', function() {
+            expect(resolved).toBe(true);
+          });
+        });
+
+        describe('providing an element as element', function() {
+          var deferred;
+          var resolved;
+          var rejectArgs;
+          var list;
+          var elementToScrollTo;
+          beforeEach(function() {
+            (function() {
+              var l = document.getElementById('list');
+              if (l) {
+                l.parentElement.removeChild(l);
+              }
+            })();
+
+            list = angular.element('<ul>').attr('id', 'list').attr('height', '150px').attr('style', 'overflow: scroll; max-height: 150px;');
+            elementToScrollTo = angular.element('<li>').attr('height', '25px');
+            list.append(elementToScrollTo);
+            for (var i = 0; i < 20; i++) {
+              list.append(angular.element('<li>').attr('height', '25px'));
+            }
+
+            document.body.appendChild(list[0]);
+            resolved = false;
+            deferred = animatedScroll.scroll(elementToScrollTo[0])
+              .then(function() {
+                resolved = true;
+              });
+
+            $rootScope.$apply();
+            $timeout.flush();
+            $interval.flush(800);
+          });
+
+          it('should resolve the promise', function() {
+            expect(resolved).toBe(true);
+          });
+        });
+
+        describe('providing a selector as element', function() {
+          var deferred;
+          var resolved;
+          var rejectArgs;
+          var list;
+          var elementToScrollTo;
+          beforeEach(function() {
+            (function() {
+              var l = document.getElementById('list');
+              if (l) {
+                l.parentElement.removeChild(l);
+              }
+            })();
+
+            list = angular.element('<ul>').attr('id', 'list').attr('height', '150px').attr('style', 'overflow: scroll; max-height: 150px;');
+            elementToScrollTo = angular.element('<li>').attr('height', '25px').attr('id', 'scroll-to');
+            list.append(elementToScrollTo);
+            for (var i = 0; i < 20; i++) {
+              list.append(angular.element('<li>').attr('height', '25px'));
+            }
+
+            document.body.appendChild(list[0]);
+            resolved = false;
+            deferred = animatedScroll.scroll('#scroll-to')
+              .then(function() {
+                resolved = true;
+              });
+
+            $rootScope.$apply();
+            $timeout.flush();
+            $interval.flush(800);
+          });
+
+          it('should resolve the promise', function() {
+            expect(resolved).toBe(true);
+          });
+        });
+
         describe('with a valid element', function() {
           var deferred;
           var resolved;
@@ -82,7 +196,7 @@
             })();
 
             list = angular.element('<ul>').attr('id', 'list').attr('height', '150px').attr('style', 'overflow: scroll; max-height: 150px;');
-            elementToScrollTo = angular.element('<li>').attr('height', '25px');
+            elementToScrollTo = angular.element('<li>').attr('height', '25px').attr('id', 'scroll-to');
             list.append(elementToScrollTo);
             for (var i = 0; i < 20; i++) {
               list.append(angular.element('<li>').attr('height', '25px'));
@@ -120,26 +234,76 @@
           });
 
           describe('scrolling on the list', function() {
-            beforeEach(function() {
-              window.scroll(0, 0);
-              list[0].scrollTop = 10000;
-              deferred = animatedScroll.scroll(elementToScrollTo, {
-                scrollElement: list
-              }).then(function() {
+            describe('providing the scrollElement as angular.element', function() {
+              beforeEach(function() {
+                window.scroll(0, 0);
+                list[0].scrollTop = 10000;
+                deferred = animatedScroll.scroll(elementToScrollTo, {
+                  scrollElement: list
+                }).then(function() {
                   resolved = true;
                 });
 
-              $rootScope.$apply();
-              $timeout.flush();
-              $interval.flush(800);
+                $rootScope.$apply();
+                $timeout.flush();
+                $interval.flush(800);
+              });
+
+              it('should resolve the promise', function() {
+                expect(resolved).toBe(true);
+              });
+
+              it('should scroll to the top of the list', function() {
+                expect(list[0].scrollTop).toBe(0);
+              });
             });
 
-            it('should resolve the promise', function() {
-              expect(resolved).toBe(true);
+            describe('providing the scrollElement as HTMLElement', function() {
+              beforeEach(function() {
+                window.scroll(0, 0);
+                list[0].scrollTop = 10000;
+                deferred = animatedScroll.scroll(elementToScrollTo, {
+                  scrollElement: list[0]
+                }).then(function() {
+                  resolved = true;
+                });
+
+                $rootScope.$apply();
+                $timeout.flush();
+                $interval.flush(800);
+              });
+
+              it('should resolve the promise', function() {
+                expect(resolved).toBe(true);
+              });
+
+              it('should scroll to the top of the list', function() {
+                expect(list[0].scrollTop).toBe(0);
+              });
             });
 
-            it('should scroll to the top of the list', function() {
-              expect(list[0].scrollTop).toBe(0);
+            describe('providing the scrollElement as selector', function() {
+              beforeEach(function() {
+                window.scroll(0, 0);
+                list[0].scrollTop = 10000;
+                deferred = animatedScroll.scroll(elementToScrollTo, {
+                  scrollElement: '#list'
+                }).then(function() {
+                  resolved = true;
+                });
+
+                $rootScope.$apply();
+                $timeout.flush();
+                $interval.flush(800);
+              });
+
+              it('should resolve the promise', function() {
+                expect(resolved).toBe(true);
+              });
+
+              it('should scroll to the top of the list', function() {
+                expect(list[0].scrollTop).toBe(0);
+              });
             });
           });
 
@@ -181,7 +345,7 @@
             });
 
             it('should scroll to the offset', function() {
-              expect(list[0].scrollTop).toBe(20);
+              expect(list[0].scrollTop).toBeGreaterThan(0);
             });
           });
         });
