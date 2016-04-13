@@ -1,3 +1,8 @@
+1.5.0
+-----
+
+- Leverage window.requestAnimationFrame()
+
 1.4.1
 -----
 
