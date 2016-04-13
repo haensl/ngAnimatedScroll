@@ -44,7 +44,19 @@ A promise based angular.js service to facilitate animated scrolling
 
 ## Usage
 
-Inject the `animatedScroll` service into your directive, factory, controller, etc. and call it's `scroll()` method.
+1.  Add a dependency to `AnimatedScroll` to your app
+
+    ```javascript
+    angular.module('myApp', ['AnimatedScroll']);
+    ```
+
+2.  Inject the `animatedScroll` service into your directive, factory, controller, etc. and call it's `scroll()` method.
+    ```javascript
+    angular.module('myController', ['animatedScroll', function(animatedScroll) {
+      animatedScroll.scroll(elementToScrollTo);
+    }]);
+    ```
+
 
 ### Example: Simple scroll operation
 
