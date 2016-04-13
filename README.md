@@ -1,5 +1,7 @@
 # ngAnimatedScroll
-A promise based angular.js service to facilitate animated scrolling.
+### A promise based angular.js service to facilitate animated scrolling.
+
+[![NPM](https://nodei.co/npm/ng-animated-scroll.png?downloads=true)](https://nodei.co/npm/ng-animated-scroll/)
 
 ## Features
 
@@ -11,35 +13,35 @@ A promise based angular.js service to facilitate animated scrolling.
 
   1. Install the ngAnimatedScroll package
 
-    * via **NPM**:
+    - via **NPM**:
 
-      ```javascript
-      npm install ng-animated-scroll --save
-      ```
+    ```javascript
+    npm install ng-animated-scroll --save
+    ```
 
-    * or **Bower**:
+    - or **Bower**:
 
-      ```javascript
-      bower install ng-animated-scroll --save
-      ```
+    ```javascript
+    bower install ng-animated-scroll --save
+    ```
 
   2. Include the library into your application:
 
-    * if installed via **NPM** include from `node_modules`:
+    - if installed via **NPM** include from `node_modules`:
 
-      ```html
-      <script src="/node_modules/ngAnimatedScroll/dist/ngAnimatedScroll.min.js"></script>
-      ```
+    ```html
+    <script src="/node_modules/ng-animated-scroll/dist/ngAnimatedScroll.service.min.js"></script>
+    ```
 
-    * if installed via **Bower** include from `bower_components`:
+    - if installed via **Bower** include from `bower_components`:
 
-      ```html
-      <script src="/bower_components/ngAnimatedScroll/dist/ngAnimatedScroll.min.js"></script>
-      ```
+    ```html
+    <script src="/bower_components/ng-animated-scroll/dist/ngAnimatedScroll.service.min.js"></script>
+    ```
 
 ## Usage
 
-Inject the `animtedScroll` service into your directive, factory, controller, etc. and call it's `scroll()` method.
+Inject the `animatedScroll` service into your directive, factory, controller, etc. and call it's `scroll()` method.
 
 ### Example: Simple scroll operation
 
