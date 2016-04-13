@@ -4,19 +4,23 @@
   describe('ngAnimatedScroll\n', function() {
     var animatedScroll;
     var $rootScope;
-    var $timeout;
-    var $interval;
 
     beforeEach(angular.mock.module('AnimatedScroll'));
 
-    beforeEach(angular.mock.inject(function(_$rootScope_, _$timeout_, _$interval_, _animatedScroll_) {
+    beforeEach(angular.mock.inject(function(_$rootScope_, _animatedScroll_) {
       $rootScope = _$rootScope_;
-      $timeout = _$timeout_;
-      $interval = _$interval_;
       animatedScroll = _animatedScroll_;
     }));
 
     describe('scroll()\n', function() {
+      beforeEach(function() {
+        jasmine.clock().install();
+      });
+
+      afterEach(function() {
+        jasmine.clock().uninstall();
+      });
+
       describe('When calling the scroll function', function() {
         describe('without providing an element', function() {
           var deferred;
@@ -95,14 +99,12 @@
               .then(function() {
                 resolved = true;
               });
-
-            $rootScope.$apply();
-            $timeout.flush();
-            $interval.flush(800);
           });
 
           it('should resolve the promise', function() {
-            expect(resolved).toBe(true);
+            window.setTimeout(function() {
+              expect(resolved).toBe(true);
+            });
           });
         });
 
@@ -133,14 +135,12 @@
               .then(function() {
                 resolved = true;
               });
-
-            $rootScope.$apply();
-            $timeout.flush();
-            $interval.flush(800);
           });
 
           it('should resolve the promise', function() {
-            expect(resolved).toBe(true);
+            window.setTimeout(function() {
+              expect(resolved).toBe(true);
+            });
           });
         });
 
@@ -171,14 +171,12 @@
               .then(function() {
                 resolved = true;
               });
-
-            $rootScope.$apply();
-            $timeout.flush();
-            $interval.flush(800);
           });
 
           it('should resolve the promise', function() {
-            expect(resolved).toBe(true);
+            window.setTimeout(function() {
+              expect(resolved).toBe(true);
+            });
           });
         });
 
@@ -218,18 +216,18 @@
                 .then(function() {
                   resolved = true;
                 });
-
-              $rootScope.$apply();
-              $timeout.flush();
-              $interval.flush(800);
             });
 
             it('should resolve the promise', function() {
-              expect(resolved).toBe(true);
+              window.setTimeout(function() {
+                expect(resolved).toBe(true);
+              });
             });
 
             it('should scroll to the top of the page', function() {
-              expect(window.scrollTop).toBe(0);
+              window.setTimeout(function() {
+                expect(window.scrollTop).toBe(0);
+              });
             });
           });
 
@@ -243,18 +241,18 @@
                 }).then(function() {
                   resolved = true;
                 });
-
-                $rootScope.$apply();
-                $timeout.flush();
-                $interval.flush(800);
               });
 
               it('should resolve the promise', function() {
-                expect(resolved).toBe(true);
+                window.setTimeout(function() {
+                  expect(resolved).toBe(true);
+                });
               });
 
               it('should scroll to the top of the list', function() {
-                expect(list[0].scrollTop).toBe(0);
+                window.setTimeout(function() {
+                  expect(list[0].scrollTop).toBe(0);
+                });
               });
             });
 
@@ -267,18 +265,18 @@
                 }).then(function() {
                   resolved = true;
                 });
-
-                $rootScope.$apply();
-                $timeout.flush();
-                $interval.flush(800);
               });
 
               it('should resolve the promise', function() {
-                expect(resolved).toBe(true);
+                window.setTimeout(function() {
+                  expect(resolved).toBe(true);
+                });
               });
 
               it('should scroll to the top of the list', function() {
-                expect(list[0].scrollTop).toBe(0);
+                window.setTimeout(function() {
+                  expect(list[0].scrollTop).toBe(0);
+                });
               });
             });
 
@@ -291,18 +289,18 @@
                 }).then(function() {
                   resolved = true;
                 });
-
-                $rootScope.$apply();
-                $timeout.flush();
-                $interval.flush(800);
               });
 
               it('should resolve the promise', function() {
-                expect(resolved).toBe(true);
+                window.setTimeout(function() {
+                  expect(resolved).toBe(true);
+                });
               });
 
               it('should scroll to the top of the list', function() {
-                expect(list[0].scrollTop).toBe(0);
+                window.setTimeout(function() {
+                  expect(list[0].scrollTop).toBe(0);
+                });
               });
             });
           });
@@ -317,14 +315,12 @@
               }).then(function() {
                   resolved = true;
                 });
-
-              $rootScope.$apply();
-              $timeout.flush();
-              $interval.flush(800);
             });
 
             it('should not have scrolled to the top of the list, yet', function() {
-              expect(list[0].scrollTop).toBeGreaterThan(0);
+              window.setTimeout(function() {
+                expect(list[0].scrollTop).toBeGreaterThan(0);
+              });
             });
           });
 
@@ -338,14 +334,12 @@
               }).then(function() {
                   resolved = true;
                 });
-
-              $rootScope.$apply();
-              $timeout.flush();
-              $interval.flush(800);
             });
 
             it('should scroll to the offset', function() {
-              expect(list[0].scrollTop).toBeGreaterThan(0);
+              window.setTimeout(function() {
+                expect(list[0].scrollTop).toBeGreaterThan(0);
+              });
             });
           });
         });
