@@ -7,6 +7,7 @@
 
   * Exposes a service that scrolls an arbitrary element to another element's location.
   * Promise enabled: The service returns a promise and resolves upon completion of the scroll operation.
+  * Selector enabled: Use CSS selectors to specify to which element to scroll.
   * Clean: No classes, no jQuery, no CSS, just plain Angular.js
 
 ## Installation
@@ -52,6 +53,14 @@ Inject the `animatedScroll` service into your directive, factory, controller, et
   }]);
   ```
 
+### Example: Using CSS selectors
+
+  ```javascript
+  angular.module('myController', ['animatedScroll', function(animatedScroll) {
+    animatedScroll.scroll('#someElement');
+  }]);
+  ```
+
 ### Example: Leveraging the promise
 
 ```javascript
@@ -83,9 +92,9 @@ angular.module('myController', ['animatedScroll', function(animatedScroll) {
 ## Arguments
 
 ### element *(required)*
-Type: `Element | angular.element`
+Type: `Element | angular.element | selector (string)`
 
-The element to scroll to.
+The element to scroll to. This can be an angular.element, (HTML)Element or CSS selector string.
 
 ### options *(optional)*
 Type: `Object`
@@ -133,10 +142,10 @@ Default: `16`
 The time for one animation frame in milliseconds.
 
 ### scrollElement
-Type: `Element | angular.element`
+Type: `Element | angular.element | selector (string)`
 Default: `window`
 
-The element to scroll.
+The element to scroll. This can be an angular.element, (HTML)Element or CSS selector string.
 
 ## [Changelog](CHANGELOG.md)
 
