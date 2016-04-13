@@ -1,3 +1,8 @@
+1.4.1
+-----
+
+- Update readme for selectors
+
 1.4.0
 -----
 
