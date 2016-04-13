@@ -77,7 +77,7 @@
   });
 
   gulp.task('build', function(done) {
-    require('run-sequence')(['clean', 'updateVersion'], 'dist', done);
+    require('run-sequence')(['clean', 'updateVersion', 'test'], 'dist', done);
   });
 
   gulp.task('updateVersion', function(done) {
