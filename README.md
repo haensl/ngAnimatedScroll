@@ -1,6 +1,10 @@
-# ngAnimatedScroll
+# DEPRECATED: ngAnimatedScroll
 
 A promise based angular.js service to facilitate animated scrolling
+
+## Deprecation notice
+
+Due to the [end of life of Angular.js](https://blog.angular.io/stable-angularjs-and-long-term-support-7e077635ee9c), this module is deprecated and no longer maintained.
 
 [![NPM](https://nodei.co/npm/ng-animated-scroll.png?downloads=true)](https://nodei.co/npm/ng-animated-scroll/)
 

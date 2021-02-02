@@ -1,3 +1,8 @@
+DEPRECATION
+-----
+
+- [#8: Deprecate.](https://github.com/haensl/ngAnimatedScroll/issues/8)
+
 1.5.0
 -----
 
