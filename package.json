@@ -4,7 +4,8 @@
   "description": "A promise based angular.js service to facilitate animated scrolling.",
   "main": "dist/ngAnimatedScroll.service.min.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "postinstall": "echo 'DEPRECATION WARNING: ng-animated-scroll is no longer maintained. Use at your own risk.'"
   },
   "repository": {
     "type": "git",
